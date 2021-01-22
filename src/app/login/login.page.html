@@ -1,0 +1,91 @@
+
+<ion-content class="ion-padding">
+  <img src="http://federalworld.com/img/in_01.gif">
+  <p>
+    <!-- <img src="https://habib.al-mawali.com/wp-content/uploads/IMG_4838-1-768x768.jpg"> -->
+    <ion-icon color="light"  name="person"></ion-icon>
+  </p>
+  <!-- form with input text and submit buttons -->
+  <ion-card>
+  <form (ngSubmit)="login()" [formGroup]="loginForm" name="form">
+    <ion-grid class="ion-padding">
+      <ion-row class="line-input">
+        <ion-col size-lg="6" size-md="6" size-sm="6" size="12">
+          <ion-item>
+            <div class="nput"> 
+            <ion-label position="floating">Username </ion-label>
+            <ion-input
+              type="text"
+              formControlName="username"
+              required
+            ></ion-input>
+            </div>
+          </ion-item>
+          <p
+            lines="none" no-padding no-margin
+            *ngIf="loginForm.get('username').touched && loginForm.get('username').hasError('required')"
+          >
+            <ion-label color="danger">
+              Username is required!
+            </ion-label>
+          </p>
+        </ion-col>
+        <ion-col size-lg="6" size-md="6" size-sm="6" size="12">
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input
+              type="password"
+              required
+              formControlName="password"
+            ></ion-input>
+          </ion-item>
+          <p
+            lines="none" no-padding no-margin
+            *ngIf="loginForm.get('password').touched && loginForm.get('password').hasError('required')"
+          >
+            <ion-label color="danger">
+              Password is required!
+            </ion-label>
+          </p>
+        </ion-col>
+        <ion-col  size="12">
+          <!-- <ion-item>
+          <ion-label>Remember Me</ion-label>
+          <ion-checkbox slot="end" ></ion-checkbox>
+        </ion-item> -->
+          <!-- <div>
+            <span style="float:left; display:inline;"><ion-checkbox checked="{{check}}" style="margin-top: 3px;" slot="start" ></ion-checkbox>
+              <ion-label (click)="check=!check" style="margin-top: 6px; position: absolute;margin-left: 3px;"> {{' Remember Me'}}</ion-label></span>
+           <span style="float: right;; display:inline;padding-top: 5px;"[routerLink]="['/auth/forgot-password']">Forgot Password?</span>
+          </div> -->
+   
+        </ion-col>
+        <ion-col  size="12">
+          <ion-button
+            expand="block"
+            fill="solid"
+            shape="round"
+           (click)="nav()"
+          >
+          kol
+          </ion-button>
+          <ion-button
+            expand="block"
+            fill="solid"
+            shape="round"
+            type="submit"
+            [disabled]="!loginForm.valid"
+          >
+          <!-- <ion-text *ngIf="isLoading">
+            <ion-spinner  name='bubbles'></ion-spinner> 
+          </ion-text> -->
+<!--           -->
+          <ion-text>Login</ion-text> 
+          </ion-button
+          >
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+  </ion-card>
+</ion-content>

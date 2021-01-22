@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button class="bordered">
+        <ion-back-button color="custom"></ion-back-button>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Attendance Dashboard
+    </ion-title>
+  </ion-toolbar>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" class="ion-text-center">
+        <div style="color:green">
+          <ion-icon name="calendar"></ion-icon>
+        </div>
+        <ion-text class="pad-left" color="primary" size="medium">
+          {{date | date: "dd MMMM yyyy" }}
+        </ion-text>
+      </ion-col>
+      <ion-col size="12" class="ion-text-center">
+        <ion-icon name="time"></ion-icon>
+        <ion-text class="pad-left" color="primary" size="medium">
+          {{date | date: "h:mm:ss a" }}
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="latitude &&longitude">
+      <ion-col class="ion-text-center" size="12">
+        <ion-icon name="pin"></ion-icon>
+        <ion-text color="primary">
+          {{"("+(latitude?(latitude |number:'.6-6'):(latitude?(latitude |number:'.6-6'):"N"))
+          +","}}{{((longitude?(longitude |number:'.6-6'):"A"))+")"}}
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <ion-button (click)="CheckIn()" [disabled]="latitude!=null" color="success" size="large" expand="block"
+          shape="round">
+          <div color="dark">
+            <ion-icon text-center src="assets/icon/enter.svg"></ion-icon><br />
+            <b>
+              <ion-label>
+                <h6>Check-In</h6>
+              </ion-label>
+            </b>
+          </div>
+        </ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button [disabled]="latitude==null" (click)="checkOut()" color="danger" size="large" expand="block"
+          shape="round">
+          <div>
+            <ion-icon text-center src="assets/icon/exit.svg"></ion-icon><br />
+            <ion-label>
+              <h6>Check-Out</h6>
+            </ion-label>
+          </div>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+
+<ion-content>
+
+</ion-content>

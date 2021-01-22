@@ -1,0 +1,16 @@
+ion-content {
+    --background: none;
+    width: var(--frame-width);
+    height: var(--frame-height);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('/assets/icon/page-not-found.png');
+    background-color: #FFFFFF;
+}
+.center {
+    margin-top: 80vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+}

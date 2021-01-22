@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">GpsAttendance</string>
+    <string name="title_activity_main">GpsAttendance</string>
+    <string name="package_name">com.zombi.gps.attendance</string>
+    <string name="custom_url_scheme">com.zombi.gps.attendance</string>
+</resources>

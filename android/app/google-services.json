@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "309718542495",
+    "firebase_url": "https://zombtest.firebaseio.com",
+    "project_id": "zombtest",
+    "storage_bucket": "zombtest.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:309718542495:android:b9a53364f986e43ef29aaa",
+        "android_client_info": {
+          "package_name": "com.zombi.gps.attendance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "309718542495-nlr4v84vcqa9sgpnhqgkapk0jj65kefm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLh4_8zyWg0dyOtPGjRPoD90n4TMnX60Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "309718542495-g49vrqjtrk2alfpb1lrcui3na3ovss3l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
